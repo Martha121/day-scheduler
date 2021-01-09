@@ -8,4 +8,6 @@ The page can be found at:
 
 # Screenshot
 ![Horiseon screenshot](./assets/images/daily-scheduler1.jpg)
+
+
 ![Horiseon screenshot](./assets/images/daily-scheduler2.jpg)
