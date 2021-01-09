@@ -7,7 +7,9 @@ The page can be found at:
 <a href="https://martha121.github.io/day-scheduler/"> martha121.github.io/day-scheduler</a>
 
 # Screenshot
+Screenshot of main page 
 ![Horiseon screenshot](./assets/images/daily-scheduler1.jpg)
 
 
+Screenshot of event being saved after page is refreshed:
 ![Horiseon screenshot](./assets/images/daily-scheduler2.jpg)
