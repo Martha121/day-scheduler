@@ -1,3 +1,7 @@
+var arrButtons = ["button9am","button10am","button11am","button12pm","button1pm","button2pm","button3pm","button4pm","button5pm"];
+var arrBlocks = ["block9am","block10am","block11am","block12pm","block1pm","block2pm","block3pm","block4pm","block5pm"];
+var now = new moment().hour();// This variable gets the current hour
+
 $(document).ready(function(){
     //Get current day from moment
     var todayDate = moment().format('MMMM Do YYYY');
@@ -6,10 +10,6 @@ $(document).ready(function(){
     addButtonListeners();
     loadData();
 });
-// This variable gets the current hour
-var now = new moment().hour();
-var arrButtons = ["button9am","button10am","button11am","button12pm","button1pm","button2pm","button3pm","button4pm","button5pm"];
-var arrBlocks = ["block9am","block10am","block11am","block12pm","block1pm","block2pm","block3pm","block4pm","block5pm"];
 
 //This function color the text area for paste,present and future task.
 function colorCodeAllRows(){
@@ -34,21 +34,11 @@ function saveChanges(){
 function loadData(){
     var myElement;
     for(var i=0; i<arrBlocks.length; i++){ 
-        myElement = document.getElementById(arrBlocks[i]);
-        console.log(myElement);
-        myElement.value = localStorage.getItem(myElement.id);
-        console.log(myElement);
+        myElement = $("#"+arrBlocks[i]);
+        myElement.val(localStorage.getItem(arrBlocks[i]));
+        
     }
 }
-/*This version of loadData not working I left it for review in office hours.
-/*function loadData(){
-    var myElement;
-    var test;
-    for(var i=0; i<arrBlocks.length; i++){ 
-        $("#"+arrBlocks[i]+ " " +".description").val(localStorage.getItem(arrBlocks[i]))
-    }
-}*/
-
 
 // Function to paint each text area based on 
 // element id, and the hour the row represents
